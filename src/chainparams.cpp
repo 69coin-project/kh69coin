@@ -47,7 +47,7 @@ static CBlock CreateGenesisBlock(const char* pszTimestamp, const CScript& genesi
  */
 static CBlock CreateGenesisBlock(uint32_t nTime, uint32_t nNonce, uint32_t nBits, int32_t nVersion, const CAmount& genesisReward)
 {
-    const char* pszTimestamp = "Kingdom of Cambodia";
+    const char* pszTimestamp = "Cambodia's Declaration of Independence from the France on 09/Nov/1953";
     const CScript genesisOutputScript = CScript() << ParseHex("04678afdb0fe5548271967f1a67130b7105cd6a828e03909a67962e0ea1f61deb649f6bc3f4cef38c4f35504e51ec112de5c384df7ba0b8d578a4c702b6bf11d5f") << OP_CHECKSIG;
     return CreateGenesisBlock(pszTimestamp, genesisOutputScript, nTime, nNonce, nBits, nVersion, genesisReward);
 }
@@ -111,17 +111,17 @@ public:
          * The characters are rarely used upper ASCII, not valid as UTF-8, and produce
          * a large 32-bit integer with any alignment.
          */
-        pchMessageStart[0] = 0xa3;
-        pchMessageStart[1] = 0xaf;
-        pchMessageStart[2] = 0xb7;
-        pchMessageStart[3] = 0xfd;
+        pchMessageStart[0] = 0xab;
+        pchMessageStart[1] = 0xac;
+        pchMessageStart[2] = 0xbd;
+        pchMessageStart[3] = 0xfa;
         nDefaultPort = 2444;
         nPruneAfterHeight = 100000;
-        genesis = CreateGenesisBlock(1525942413, 969031, 0x1e0ffff0, 1, 69 * COIN);
+        genesis = CreateGenesisBlock(1528609794, 932480, 0x1e0ffff0, 1, 69 * COIN);
 
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x73a15ca3d702b8d4bc31f6c70c7cc934accce240dc0a0d5c2d749ab5a251c9f4"));
-        assert(genesis.hashMerkleRoot == uint256S("0x4b034c82076533295dd2ff3491ec85ec0332a6ed80916e60fffb06ad1d3b0c0b"));
+        assert(consensus.hashGenesisBlock == uint256S("0xc2f4519e166dbe7f46e3de208284dc52c6ba35c4b0d103bed9e20bbeeaef0a69"));
+        assert(genesis.hashMerkleRoot == uint256S("0x1951b8c6db8b5d25c3acab50408e79875624ea36b25081faf0cd77cc46ad9b5b"));
 
         // Note that of those with the service bits flag, most only support a subset of possible options
 
