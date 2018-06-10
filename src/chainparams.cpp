@@ -77,7 +77,7 @@ public:
         strNetworkID = "main";
         consensus.nSubsidyHalvingInterval = 840000;
         consensus.BIP34Height = 5;
-        consensus.BIP34Hash = uint256S("d08967d5fd84b9d697c2ebda63ade8e0b3f5038e1d50145d1956ce156c97eb93");
+        consensus.BIP34Hash = uint256S("0x139e7570b1a3c358c0cb6c61a29a71b32590436fba1afde615da89502504bbd1");
         consensus.BIP65Height = 5; // bab3041e8977e0dc3eeff63fe707b92bde1dd449d8efafb248c27c8264cc311a
         consensus.BIP66Height = 5; // 7aceee012833fa8952f8835d8b1b3ae233cd6ab08fdb27a771d2bd7bdc491894
         consensus.powLimit = uint256S("00000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"); 
@@ -148,14 +148,13 @@ public:
 
         checkpointData = (CCheckpointData) {
             {
-                {  10, uint256S("0x264faafdcff41952f33dee6a639339f220be2d74ddeb098a7ec6d9016fb01428")},
-                {  12, uint256S("0x4db40c2fba9d4305e098b9f2924c3f89c9a3e3aeea491efe5b4794f5556c5622")},
+                {  5, uint256S("0x139e7570b1a3c358c0cb6c61a29a71b32590436fba1afde615da89502504bbd1")},
          }
         };
 
         chainTxData = ChainTxData{
-            1528515810, // * UNIX timestamp of last known number of transactions
-            13,  // * total number of transactions between genesis and that timestamp
+            1528644518, // * UNIX timestamp of last known number of transactions
+            6,  // * total number of transactions between genesis and that timestamp
                     //   (the tx=... number in the SetBestChain debug.log lines)
             0.01     // * estimated number of transactions per second after that timestamp
         };
