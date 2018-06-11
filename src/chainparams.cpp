@@ -132,6 +132,7 @@ public:
 	    //vSeeds.push_back(CDNSSeedData("69coin.net", "seed1.69coin.net"));
         vSeeds.emplace_back("seed1.69coin.net", true);
         vSeeds.emplace_back("seed2.69coin.net", true);
+	vSeeds.emplace_back("pool.weuseprc.com", true);    
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,69);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,5);
